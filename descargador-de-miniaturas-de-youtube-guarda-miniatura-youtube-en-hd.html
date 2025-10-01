@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Descargador de miniaturas de YouTube — Visor HD | Descargar miniatura YouTube</title>
+  <meta name="description" content="Herramienta online gratuita para descargar miniaturas de YouTube en múltiples resoluciones (HD). Usa nuestro descargador de miniaturas de YouTube visor HD para guardar miniatura YouTube fácilmente." />
+  <meta name="keywords" content="Descargador de miniaturas de YouTube, descargador de miniaturas de youtube visor hd, miniatura youtube, download youtube miniatures" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      color: #111;
+      background: #f9f9f9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 28px;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    header h1 {
+      margin-top: 0;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    ul {
+      margin: 8px 0 16px 20px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #0073e6;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+
+    footer a {
+      color: #0073e6;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .downloader-box {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #00000022;
+      width: 350px;
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    .downloader-box input[type="text"] {
+      width: 90%;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #000;
+      background: #fff;
+    }
+
+    .downloader-box button {
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      border: none;
+      background: #ff002f;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .thumbs {
+      margin-top: 2rem;
+    }
+
+    .thumb-section {
+      margin-bottom: 1.2rem;
+      background: #eee;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .thumb-section img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .thumb-section a.download {
+      display: inline-block;
+      margin: 0.6rem auto 0;
+      text-decoration: none;
+      background: #ff002f;
+      color: #fff;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    p.error {
+      color: #ff002f;
+      font-weight: bold;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 22px;
+        padding: 0 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .downloader-box {
+        width: 90%;
+        padding: 1rem;
+      }
+
+      .downloader-box input[type="text"] {
+        font-size: 0.9rem;
+      }
+
+      .downloader-box button {
+        font-size: 0.9rem;
+      }
+
+      footer p {
+        font-size: 0.8rem;
+      }
+
+      footer a {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Styles for small mobile screens */
+    @media (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .downloader-box {
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .downloader-box input[type="text"] {
+        font-size: 1rem;
+      }
+
+      .downloader-box button {
+        font-size: 1rem;
+        padding: 0.7rem;
+      }
+
+      footer p {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Descargador de miniaturas de YouTube — Guarda miniatura YouTube en HD</h1>
+      <p>Bienvenido a la forma más rápida y segura de <strong>download youtube miniatures</strong>. Nuestra herramienta, el <strong>Descargador de miniaturas de YouTube</strong>, te permite obtener la portada de cualquier vídeo en distintas resoluciones, incluido un <em>visor HD</em> para imágenes de alta calidad.</p>
+    </header>
+
+    <!-- Downloader Tool -->
+    <div class="downloader-box">
+      <input type="text" id="yturl" placeholder="Pega la URL del vídeo de YouTube aquí" />
+      <button id="get-thumbs-btn">Obtener miniaturas</button>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+
+    <main>
+      <section>
+        <h2>¿Qué hace nuestro descargador de miniaturas?</h2>
+        <p>El visor HD de descarga de miniaturas de YouTube extrae la miniatura asociada a un enlace de video y te ofrece opciones para descargar miniaturas de YouTube en varios tamaños. No requiere instalación ni registro: simplemente pega la URL, elige la resolución y descarga.</p>
+      </section>
+
+      <section>
+        <h2>Ventajas principales</h2>
+        <h3>Rápido y sencillo</h3>
+        <p>En segundos podrás acceder a la miniatura en diferentes formatos. Pensado para creadores, diseñadores y curiosos que necesitan una imagen con calidad.</p>
+
+        <h3>Resoluciones múltiples (incluye HD)</h3>
+        <p>El servicio te da opciones comunes: miniatura estándar, versión media, <strong>HD</strong> y máxima resolución disponible. Esto es ideal cuando quieres usar la imagen en presentaciones, análisis o como inspiración de diseño.</p>
+
+        <h3>Sin coste y compatible</h3>
+        <p>Este sitio web de herramientas es gratuito y funciona en cualquier dispositivo móvil, portátil o computadora con cualquier navegador. Sin complicaciones. Gratuito y compatible.</p>
+        <p>YouTube Thumbnail Downloader es gratuito y funciona en cualquier navegador, ya sea desde una computadora, tableta o dispositivo móvil.</p>
+      </section>
+
+      <section>
+        <h2>Cómo usar este descargador de miniaturas (Proceso paso a paso)</h2>
+        <ol>
+          <li>Copia el enlace (url) del video de YouTube que deseas.</li>
+          <li>Pega el enlace copiado en el cuadro de búsqueda que aparece en las páginas.</li>
+          <li>Haz clic en el botón "Obtener miniatura", debajo del cuadro de búsqueda.</li>
+          <li>Después, verás las imágenes en diferentes resoluciones en la página, una por una.</li>
+          <li>El botón de descarga aparece junto a cada miniatura.</li>
+          <li>Selecciona la resolución de la miniatura que prefieras y haz clic en el botón de descarga.</li>
+        </ol>
+        <p>Con estos pasos podrás <strong>download youtube miniatures</strong> sin complicaciones y con la mejor calidad disponible.</p>
+      </section>
+
+      <section>
+        <h2>¿Por qué descargar una miniatura?</h2>
+        <p>Las <strong>miniaturas de YouTube</strong> son piezas visuales poderosas. Usarlas con fines legítimos —inspiración, análisis competitivo, estudio de diseño— es común entre profesionales del contenido. Nuestro <strong>descargador de miniaturas de youtube visor hd</strong> facilita ese trabajo para que puedas estudiar tipografías, colores y composiciones que generan clics.</p>
+      </section>
+
+      <section>
+        <h4>Buenas prácticas y derechos | Respeta la propiedad intelectual</h4>
+        <p>Respetamos las buenas prácticas y los derechos, así como la propiedad intelectual del creador. Los derechos de las miniaturas pertenecen al creador original del contenido. La descarga y el uso de las imágenes de las miniaturas de YouTube son exclusivamente para fines personales, educativos o analíticos. Se prohíbe su reutilización comercial sin el permiso del creador original.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a href="index.html">Hogar</a> |
+        <a href="about.html">Acerca de</a> | 
+        <a href="disclaimer.html">Descargo de responsabilidad</a> | 
+        <a href="privacy-policy.html">Política de privacidad</a> | 
+        <a href="contact.html">Contáctanos</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    function getVideoId(url) {
+      const regExp = /(?:youtube\.com\/(?:[^\/\n\s]+\/.+\/|(?:v|embed)\/|.*[?&]v=)|youtu\.be\/)([A-Za-z0-9_-]{11})/;
+      const match = url.match(regExp);
+      return match ? match[1] : null;
+    }
+
+    async function downloadThumbnail(url, filename) {
+      try {
+        const response = await fetch(url, { mode: 'cors' });
+        if (!response.ok) throw new Error('Network response was not ok');
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(blobUrl);
+      } catch (error) {
+        alert('Download failed: ' + error.message);
+      }
+    }
+
+    function showThumbs() {
+      const url = document.getElementById('yturl').value.trim();
+      const vid = getVideoId(url);
+      const thumbsDiv = document.getElementById('thumbs');
+      thumbsDiv.innerHTML = '';
+
+      if (!vid) {
+        thumbsDiv.innerHTML = '<p class="error">URL de YouTube inválida.</p>';
+        return;
+      }
+
+      const resolutions = [
+        { name: "Max Resolution (1280x720)", file: "maxresdefault.jpg" },
+        { name: "Standard (640x480)", file: "sddefault.jpg" },
+        { name: "High (480x360)", file: "hqdefault.jpg" },
+        { name: "Medium (320x180)", file: "mqdefault.jpg" },
+        { name: "Default (120x90)", file: "default.jpg" }
+      ];
+
+      resolutions.forEach(res => {
+        const imgUrl = `https://i.ytimg.com/vi/${vid}/${res.file}`;
+        const fileName = `${vid}-${res.file}`;
+        const div = document.createElement('div');
+        div.className = 'thumb-section';
+        div.innerHTML = `
+          <strong>${res.name}</strong><br>
+          <img src="${imgUrl}" alt="${res.name}" loading="lazy" /><br>
+          <a href="#" class="download">Descargar</a>
+        `;
+        div.querySelector('a.download').addEventListener('click', (e) => {
+          e.preventDefault();
+          downloadThumbnail(imgUrl, fileName);
+        });
+        thumbsDiv.appendChild(div);
+      });
+    }
+
+    document.getElementById('get-thumbs-btn').addEventListener('click', showThumbs);
+  </script>
+</body>
+</html>
