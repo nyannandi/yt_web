@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de porcentaje de calificación en línea gratuita</title>
+    <meta name="description" content="Calcula rápidamente tu porcentaje de calificación en el examen con nuestra calculadora de porcentaje de calificaciones fácil de usar. Simplemente ingresa tu calificación y obtén un porcentaje preciso al instante, lo que te ayudará a monitorear tu progreso académico." />
+    <meta name="keywords" content="Calculadora de porcentaje de notas, Calcular porcentaje de examen, Calculadora de porcentaje en línea, Calculadora de notas para estudiantes, Calculadora de porcentaje académico, Calculadora de porcentaje de calificación, Convertidor de notas a porcentaje, Calculadora simple de porcentaje para estudiantes, Calcular porcentaje de puntajes de examen, Herramienta en línea para calcular porcentaje, Cómo calcular porcentaje de notas, Calculadora de porcentaje de exámenes, Calculadora de porcentaje de puntuación académica, Fórmula de porcentaje de notas en línea, Calculadora rápida de porcentaje para estudiantes" />
+  
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        /* Form Styles */
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .calculator-form input {
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 300px;
+            margin: 5px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .calculator-form button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .calculator-form button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        /* Content Section Padding */
+        .content-section {
+            padding: 0 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #333;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .calculator-form input, .calculator-form button {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-section {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora de porcentaje de calificaciones gratuita en línea</h1>
+
+        <div class="calculator-form">
+            <input type="number" id="totalMarks" placeholder="Ingrese las calificaciones totales" required>
+            <input type="number" id="obtainedMarks" placeholder="Ingrese las calificaciones obtenidas" required>
+            <button onclick="calculatePercentage()">Calcular porcentaje</button>
+        </div>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <!-- Content Section with padding -->
+    <div class="content-section">
+        <h2>Calcular el porcentaje de forma precisa y eficaz</h2>
+        <p>En la actualidad, el mundo avanza a un ritmo acelerado y el entorno social cambia a un ritmo vertiginoso. En esta sociedad, las calificaciones son muy importantes. En esta sociedad, la educación es crucial para la vida. Y dado que la educación es crucial, ¿cómo podemos avanzar en este proceso educativo? Es necesario cuantificar el proceso. Por eso, la sociedad inventó un sistema revolucionario y extraordinario llamado calificaciones. También inventó los exámenes, que a los estudiantes no les gustan y odian. Para comprobar las calificaciones, necesitamos calcular un porcentaje de ellas. Por eso necesitamos este tipo de calculadora de porcentaje de calificaciones en línea gratuita.</p>
+
+        <h2>Por qué elegir nuestra calculadora de porcentajes en lugar de otros proveedores de servicios</h2>
+        <p>Nuestro servicio ofrece muchas ventajas. Normalmente, se manejan números enormes que resultan cansados. Además, es muy complejo. Nuestro cerebro no está diseñado para procesar los números cuando se presentan. Como especie, hemos evolucionado para reconocer patrones, no números, matemáticas, etc. Por eso desarrollamos esta herramienta para que nuestros generosos usuarios puedan completar sus tareas. Es muy fácil de usar. Vivimos en un mundo que cambia rápidamente.</p>
+
+        <p>El tiempo de todos es muy valioso y debemos respetarlo. Por eso, es muy irritante que una tarea tarde tanto tiempo en completarse, y aún más patético que una tarea normal como calcular el porcentaje de cualquier número. Por eso, nuestro equipo desarrolló una calculadora de porcentajes rápida y confiable que ofrece resultados instantáneos.</p>
+
+        <p>El usuario quiere decir que no necesitas programación ni conocimientos técnicos. No necesitas saber matemáticas ni fórmulas avanzadas para realizar esta tarea. Está especialmente diseñado para la gente común. Al usar cualquier servicio, siempre hay que tener en cuenta que tiene un costo. Porque todo tiene un costo.</p>
+        <p>Como es habitual, la gente piensa que este servicio tiene un precio, y se equivocan. Es totalmente gratuito. El usuario no tiene que pagar nada. Si el servicio o el producto es gratuito, no es fiable ni preciso. Pero nosotros hemos desarrollado una herramienta de cálculo de porcentajes muy fiable, eficaz y precisa. No tiene de qué preocuparse.<p/>
+
+
+        <h2>¿Cómo se refiere a que el usuario utiliza nuestra herramienta gratuita de cálculo de porcentajes en línea?</h2>
+        <p>Si necesitas calcular, es así de simple. Solo tienes que acceder a nuestro sitio web. Al abrirlo, verás dos áreas de entrada en la pantalla: una muestra la puntuación total y la otra la puntuación obtenida. Debes introducir el número en el formato especificado. A continuación, verás un botón justo debajo. Haz clic en él para realizar la tarea. Al volver a hacer clic, verás el resultado. Obtendrás el resultado; en otras palabras, la tarea que querías completar está completa. Solo toma un par de segundos. Aunque podrías pensar que lleva horas, no es así. Es muy rápido y fiable.</p>
+
+        <h2>¿Quién puede utilizar esta herramienta?</h2>
+        <p>¿Quién puede usar este servicio? Los extraterrestres, por supuesto, no. Es para gente común como tú o como nosotros. Por ejemplo, como estudiantes, podemos usar esta calculadora de porcentajes en línea para calcular nuestras calificaciones y analizar nuestro rendimiento académico. Es necesario cuantificar el proceso para analizar nuestro progreso y nuestro rendimiento en una materia específica o en general.</p>
+
+        <p>Como docentes, podemos calcular las calificaciones de nuestros estudiantes para analizar su progreso. Sin embargo, a menos que analicemos los resultados, no guiaremos al estudiante ni comprenderemos dónde debemos enfocarnos. Esto ayuda a evaluar el rendimiento de nuestros estudiantes. Los padres también pueden evaluar el rendimiento académico de sus hijos, en qué materia son buenos y en cuál no. Es un uso muy versátil.</p>
+
+        <h2>Al final del día Conclusión</h2>
+        <p>Si buscas una calculadora de porcentaje de puntos en línea confiable, rápida y gratuita (sin necesidad de instalar ningún software), aquí la tienes. Estás en el lugar correcto. Ofrecemos este servicio sin costo. Puedes acceder desde cualquier navegador y dispositivo: computadora, móvil, tableta, etc. No importa la versión, funciona cuando la necesitas. Es fácil de usar y te facilita la vida. Gracias.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>
+        <a href="index.html">Hogar</a> |
+        <a href="about.html">Acerca de</a> | 
+        <a href="disclaimer.html">Descargo de responsabilidad</a> | 
+        <a href="privacy-policy.html">Política de privacidad</a> | 
+        <a href="contact.html">Contáctanos</a>
+      </p>
+    </footer>
+
+    <script>
+        function calculatePercentage() {
+            const totalMarks = document.getElementById('totalMarks').value;
+            const obtainedMarks = document.getElementById('obtainedMarks').value;
+
+            if (totalMarks && obtainedMarks && totalMarks > 0) {
+                const percentage = (obtainedMarks / totalMarks) * 100;
+                document.getElementById('result').innerHTML = `Your Percentage: ${percentage.toFixed(2)}%`;
+            } else {
+                document.getElementById('result').innerHTML = 'Please enter valid marks!';
+            }
+        }
+    </script>
+
+</body>
+</html>
