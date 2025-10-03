@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://crezzmrezz.com/sitemap.xml
